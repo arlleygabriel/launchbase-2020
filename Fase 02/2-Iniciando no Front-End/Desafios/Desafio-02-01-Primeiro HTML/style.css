@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family:'Roboto' ;
+}
+
+body{
+  background-color:#42426f ;
+}
+
+header{
+  padding: 30px;
+  border-bottom: 1px solid #333;
+  background-color: rgba(23,23,38,0.2);
+}
+
+.links{
+  text-align: center;
+  
+}
+
+.links a {
+  text-align: center;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 30px;
+}
+
+.links a:hover{
+  color: rgb(99, 182, 131);
+  transition: 150ms;
+}
