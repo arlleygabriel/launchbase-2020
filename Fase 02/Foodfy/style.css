@@ -1,0 +1,84 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap';
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto';
+  color: black;
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+header{
+  padding-top: 36.1px;
+  margin:  auto;
+  max-width: 940px;
+  text-align: left;
+}
+
+header img{
+  padding-right: 122.4px;
+}
+
+.links a{
+  padding-right: 30px;
+  vertical-align: 6px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#outdoor-container{
+  margin: 20px auto;
+  background-color: #F8DFDB;
+  border-radius:30px;
+  max-width: 940px;
+  max-height: 366px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  justify-items: center;
+}
+
+#outdoor-container img{
+  margin-top: 66px;
+  margin-left: 27px;
+  
+}
+
+#outdoor-container #text-outdoor{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+#outdoor-container #text-outdoor h1 {
+  position: relative;
+  display: grid;
+  align-items: end;
+}
+
+
+
+#outdoor-container #text-outdoor p{
+  opacity: 0.7;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  display: grid;
+}
+
+.most-acessed-recipes{
+  text-align: center;
+}
+
+.most-acessed-recipes-text h1{
+  margin: 40px auto;
+  text-align: left;
+  max-width: 940px;
+}
+
+
+
+
