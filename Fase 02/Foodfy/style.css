@@ -71,6 +71,8 @@ header img{
 
 .most-acessed-recipes{
   text-align: center;
+  max-width: 940px;
+   margin: auto;
 }
 
 .most-acessed-recipes-text h1{
@@ -79,6 +81,188 @@ header img{
   max-width: 940px;
 }
 
+.most-acessed-recipes-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 940px;
+  grid-gap: 30px 20px;
+}
+
+.one-of-most-acessed-recipe img {
+  max-width: 300px;
+  max-height: 140px;
+  border-radius: 15px;
+}
+
+.one-of-most-acessed-recipe .one-of-most-acessed-recipe-name {
+  font-size: 18px;
+  font-weight: normal;
+  color: #111111;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.one-of-most-acessed-recipe .one-of-most-acessed-recipe-author{
+  font-size: 14px;
+  font-weight: normal;
+  color:#777777;
+  text-align: left;
+  padding-top: 5px;
+}
+
+footer{
+  margin: 50px auto 0px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #EEEEEE;
+  max-height: 62px;
+}
+
+
+/* === ABOUT PAGE === */
+
+
+.about-container{
+  max-width: 940px;
+  margin: 50px auto;
+  
+}
+
+.about-foodfy-title h1{
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111111;
+}
+
+.how-all-started-title,
+.our-recipes-title
+{
+  font-size: 20px;
+  color: #111111;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.about-foodfy-text,
+.how-all-started-text,
+.our-recipes-text
+{
+  font-size: 18px;
+  line-height: 28px;
+  color: #444444;
+}
 
 
 
+/* === RECIPES PAGE === */
+
+.recipes-container{
+  max-width: 940px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px 20px;
+}
+
+.one-recipe img {
+  max-width: 300px;
+  max-height: 140px;
+  border-radius: 15px;
+}
+
+.one-recipe img:hover{
+  cursor: pointer;
+}
+
+.one-recipe-name{
+  font-size: 18px;
+  font-weight: normal;
+  color: #111111;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.one-recipe-name:hover{
+  cursor: pointer;
+}
+
+.one-recipe-author{
+  font-size: 14px;
+  font-weight: normal;
+  color:#777777;
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* === MODAL DEACTIVED === */
+
+.modal-container{
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal{
+  background-color: whitesmoke;
+  max-width: 660px;
+  height: 413px;
+  position: relative;
+  margin: 30vh auto;
+  border-radius: 16px;
+}
+
+.close-modal-button{
+  font-size: 16px;
+  color: #999999;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin-top: 60px;
+} 
+
+
+/* === MODAL ACTIVED === */
+.modal-container.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-recipe-img{
+  text-align: center;
+}
+
+.modal-recipe-img img{
+  max-height: 200px;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-top: 30px;
+  position: relative;
+ }
+
+.modal-recipe-name h1{
+  position: relative;
+  text-align: center;
+  font-weight: normal;
+  font-size: 24px;
+  color: #111111;
+  margin-top: 20px;
+  
+}
+
+.modal-recipe-author p{
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  color: #777777;
+  margin-top: 5px;
+  
+}
