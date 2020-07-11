@@ -1,0 +1,75 @@
+{% extends 'layout.njk'%}
+
+{% block title %}
+  <title>Rocketseat - Courses</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+  <div class="content">
+    <h1>Our content and courses</h1>
+    <section class="courses">
+
+      <div class="course" id="starter">
+      <div class="course-image-container">
+        <img src="/img/starter.svg" alt="course starter logo">
+      </div>
+      <div class="course-tittle">
+        <p>Starter</p>
+      </div>
+      <div class="course-modules-quantity">
+        <p>10 Modules</p>
+      </div>
+      <div class="course-price">
+        <p>Price: Free</p>
+      </div>
+    </div>
+
+    <div class="course" id="launchbase">
+      <div class="course-image-container">
+        <img src="/img/lb.svg" alt="course starter logo">
+      </div>
+      <div class="course-tittle">
+        <p>Launchbase</p>
+      </div>
+      <div class="course-modules-quantity">
+        <p>20 Modules</p>
+      </div>
+      <div class="course-price">
+        <p>Price: Paid</p>
+      </div>
+    </div>
+
+    <div class="course" id="gostack">
+      <div class="course-image-container">
+        <img src="/img/gs.svg" alt="course starter logo">
+      </div>
+      <div class="course-tittle">
+        <p>Go Stack</p>
+      </div>
+      <div class="course-modules-quantity">
+        <p>30 Modules</p>
+      </div>
+      <div class="course-price">
+        <p>Price: Paid</p>
+      </div>
+    </div>
+
+    </section>
+    <div class="modal-overlay">
+      <div class="modal">
+         <a class="maximize-modal">
+          <i class="material-icons">maximize</i>
+        </a>
+        <a class="close-modal">
+          <i class="material-icons">close</i>
+        </a>
+        <div class="modal-content">
+          <iframe src="" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/scripts.js"></script>
+{% endblock %}
