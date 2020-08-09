@@ -87,6 +87,7 @@ header{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  cursor: pointer;
 }
 
 .card{
@@ -158,4 +159,39 @@ iframe{
   height: 90%;
   position: absolute;
   top: 5%;
+}
+
+/* === FEATURED === */
+
+.featured-wrapper.card__image_container{
+  position: relative;
+}
+
+.featured{
+  background: #f7d05f;
+  color: #111111;
+  padding: 2px 8px;
+  position: absolute;
+  right: 5px;
+  border-radius: 16px;
+  top: -10px;
+}
+
+/* === VIDEO PAGE === */
+
+.video{
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.card__video-container{
+  position: relative;
+  padding-top: 62.5%;
+}
+
+.card__video-container iframe{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
