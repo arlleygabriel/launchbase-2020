@@ -13,8 +13,13 @@
   color: whitesmoke;
 }
 
+html{
+  height: 100%;
+}
+
 body{
-  background-color:#42426f ;
+  
+  background:  linear-gradient(0deg, rgba(103,51,157,1) 14%, rgba(44,16,68,1) 100%);
 }
 
 header{
