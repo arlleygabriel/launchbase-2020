@@ -5,20 +5,32 @@
 {% endblock %}
 
 {% block content%}
-  <div class="wrapper">
-    <img src="{{ about.img }}" alt="logo rocketseat">
-    <h1>{{ about.name }}</h1>
-    <h2>{{ about.slogan }}</h2>
-    {% for tech in about.techs %}
-    <ul>
-      <li>{{ tech.name }}</li>
-    </ul>
-    {% endfor %}
+  <div class="wrapper-container">
+    <div class="wrapper">
+      <div class="logo-and-text-container">
+         <img src="{{ about.img }}" alt="logo rocketseat" class="rocketseat-logo">
+      </div>
+      <div class="text-container">
+        <h1>{{ about.name }}</h1>
+        <h2>{{ about.slogan }}</h2>
+        <<h3>{{ about.text }}</h3>
+        
+      </div>
+      <div class="techs">
+          {% for tech in about.techs %}
+          <ul>
+            <li>{{ tech.name }}</li>
+            <img src="{{ tech.logo }}" alt="{{ tech.name }}" class="tech-logos">
+          </ul>
+          {% endfor %}
+        </div>
+    </div>
   </div>
-
-  <div id="links-footer" class="links">
+ 
+  <div id="links-footer" class="links-footer">
   {% for link in about.links %}
-    <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+    <img src="{{ link.img }}" alt="{{ link.name }} logo"> 
+    <a href="{{ link.url }}" target="_blank"> {{ link.name }} </a>
   {% endfor %} 
   </div>
 {% endblock %}

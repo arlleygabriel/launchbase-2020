@@ -17,17 +17,18 @@ nunjucks.configure("views", {
 server.get("/", function(req, res){
   const about = {
     name: 'Rocketseat🚀',
-    img: "/img/screenshot_1.png",
-    slogan:'As melhores tecnologias em programação',
+    img: "/img/melhores-tecnologias.svg",
+    slogan:'The best coding technologies for you reach the next level in programming!',
+    text: 'Imagine yourself mastering the same technologies adopted by the best teams in the world, building high performance applications and standing out among the largest programmers',
     techs: [
-      {name: 'Node.js'},
-      {name: 'React'},
-      {name: 'React Native'}
+      {name: 'Node.js', logo: '/img/nodejs-seeklogo.com.svg'},
+      {name: 'React', logo: '/img/react.png'},
+      {name: 'React Native', logo: '/img/react-native.png'}
     ],
     links:[
-      {name: 'Facebook', url: "https://www.facebook.com/rocketseat/" },
-      {name: 'Instagram', url: 'https://www.instagram.com/rocketseat_oficial'},
-      {name: 'Github', url: 'https://github.com/Rocketseat'}
+      {name: '/rocketseat', url: "https://www.facebook.com/rocketseat/", img: "/img/facebook.svg" },
+      {name: '/rocketseat_oficial', url: 'https://www.instagram.com/rocketseat_oficial', img: "/img/instagram-esbocado.svg"},
+      {name: '/rocketseat', url: 'https://github.com/Rocketseat', img: "/img/logotipo.svg"}
     ]
   }
   return res.render("about", { about : about})

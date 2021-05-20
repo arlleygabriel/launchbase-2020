@@ -13,19 +13,18 @@
   color: whitesmoke;
 }
 
-html{
+html,body{
   height: 100%;
+  width: 100%;
 }
 
-body{
-  
-  background:  linear-gradient(0deg, rgba(103,51,157,1) 14%, rgba(44,16,68,1) 100%);
-}
+
 
 header{
   padding: 30px;
-  border-bottom: 1px solid #333;
-  background-color: rgba(23,23,38,0.2);
+  border-bottom: 2px solid #333;
+  background:  var(--color-rocket);
+  
 }
 
 .links{
@@ -33,64 +32,150 @@ header{
   
 }
 
-.links a {
+.links-footer{
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 50px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background:  var(--color-rocket);
+}
+
+.links a,
+.links-footer a {
   text-align: center;
   color: whitesmoke;
   text-decoration: none;
   font-size: 18px;
   line-height: 28px;
-  margin: 0 30px;
+  margin: 0 30px 0 0;
 }
 
-.links a:hover{
-  color: rgb(99, 182, 131);
-  transition: 150ms;
-}
-
-.wrapper{
-  text-align: center;
-  padding: 32px;
-}
-
-.wrapper img{
-  border-radius: 50%;
-  height: 250px;
-  border: 3px solid  rgba(80,250,123,0.5);
-  margin-bottom: 32px;
-}
-
-.wrapper h1{
-  text-align: center;
-  font-size: 42px;
-  line-height: 52px;
-  font-weight: bold;
-  font-family: 'Roboto';
-  text-decoration: underline rgba(80,250,123,0.4);
-}
-
-.wrapper h2{
-  font-size: 24px;
-  line-height: 34px;
-  font-weight: normal;
-  margin-top: 12px;
-  opacity: 0.8;
-}
-
-.wrapper ul li {
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: normal;
-  margin-top: 12px;
-  opacity: 0.8;
-  text-decoration: none;
-  list-style: none;
+.links-footer img{
+  width: 30px;
+  height: 30px;
+  margin-right: 1px;
+  
 }
 
 #links-footer a{
   border-bottom: 1px solid  rgba(80,250,123,0.4) ;
 }
 
+.links a:hover,
+.links-footer a:hover {
+  color: rgb(99, 182, 131);
+  transition: 150ms;
+}
+
+.wrapper-container{
+  height: 75%;
+  display: flex;
+  align-items: center;
+ 
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.wrapper{
+  
+  text-align: center;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr ;
+  align-content: center;
+  max-width: 1000px;
+  max-height: 500px;
+  margin: 0 auto;
+  grid-template-areas: "logo t"
+                       "techs techs"
+}
+
+.logo-and-text-container{
+  grid-area: logo;
+}
+
+.text-container{
+  grid-area: t;
+}
+
+.techs{
+  grid-area: techs;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 10px;
+}
+.rocketseat-logo{
+  
+  height: 250px;
+  
+  margin-bottom: 32px;
+  text-align: right;
+}
+
+.wrapper h1{
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: bold;
+  font-family: 'Roboto';
+  text-decoration: underline rgba(80,250,123,0.4);
+  color: #4f4f4f;
+}
+
+.wrapper h2{
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
+  opacity: 0.8;
+  text-align: left;
+  color: gray;
+  
+}
+
+.wrapper h3{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  text-align: left;
+  color: #4f4f4f;
+}
+
+
+.wrapper ul li {
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-top: 10px;
+  
+  text-decoration: none;
+  list-style: none;
+  color: #4f4f4f;
+}
+
+.tech-logos{
+
+  width: 70px;
+  height: 70px;
+  
+  padding-top: 10px;
+  
+}
+
 /*=== CONTENT PAGE === */
+
+.content{
+  width: 100%;
+  height: 100%;
+  background-color: #4f4f4f;
+ 
+}
 
 .content h1{
   text-align: center;
@@ -103,26 +188,28 @@ header{
 }
 
 .courses {
-  
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;
-  max-width: 920px;
-  gap: 10px;
-  justify-items: center;
-  align-items:center;
+  max-width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding-top: 60px;
+    gap: 20px;
 }
 
-.course-image-container img{
-  width: 100%;
+.course{
+  border-radius: 20px;
+  
+  padding: 30px;
 }
+
+
 
 .course-image-container img:hover{
-  width: 100%;
+  
   cursor: pointer;
 }
 
-.course-tittle,
+.course-image-container,
 .course-modules-quantity,
 .course-price
  p{
@@ -130,6 +217,48 @@ header{
   padding-top: 30px;
   font-size: 21px;
   text-decoration: underline rgba(80,250,123,0.4);
+}
+
+.course-tittle{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.course-tittle p{
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+#starter:hover {
+  border: 2px solid rgb(113, 89, 193);
+  transition: 300ms;
+}
+
+#starter span{
+  color: rgb(113, 89, 193);
+  font-weight: bold;
+}
+
+#launchbase:hover {
+  border: 2px solid rgb(253, 149, 31);
+  transition: 300ms;
+}
+
+#launchbase span{
+  color:  rgb(253, 149, 31);
+  font-weight: bold;
+}
+
+#gostack:hover {
+  border: 2px solid rgb(4, 211, 97);
+  transition: 300ms;
+}
+
+#gostack span{
+  color: rgb(4, 211, 97);
+  font-weight: bold;
 }
 
 /* === MODAL === */
